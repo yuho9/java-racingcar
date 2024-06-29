@@ -18,4 +18,14 @@ public class StringTest {
 		assertThat(strArr).containsExactly("1","2");
 	}
 	
+	@Test
+	@DisplayName("요구사항 1-2 : \"1\"을 , 로 split 했을 때 1만을 포함하는 배열이 반환되는지에 대한 학습 테스트를 구현한다.")
+	void splitString_one() {
+		String str = "1";
+		
+		String[] strArr = str.split(",");
+		
+		assertThat(strArr).containsExactly("1");
+	}
+
 } 
