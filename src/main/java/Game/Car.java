@@ -19,6 +19,33 @@ public class Car {
 	public String getName() {
 		return name;
 	}
+	public int getRecord() {
+		return record;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setRecord(int record) {
+		this.record = record;
+	}
+	
+	//전진,멈춤을 결정하는 랜덤한 수
+	public boolean key() {
+	        return new Random().nextInt(10) >= 4;
+	    }
+	
+	//key를 바탕으로 기록을 바꿈
+	public void move() {
+		if(key()) {
+			record++;
+		}
+	}
+	
+	//기록을 -형태로 반환
+	public String showRecord() {
+		return "-".repeat(record);
+	}
 	
 
 }
