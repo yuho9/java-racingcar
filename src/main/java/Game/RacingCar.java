@@ -25,16 +25,11 @@ public class RacingCar {
 					return; // 프로그램 종료
 					}
 		        }
-	
+	 
 			//횟수 입력
 			System.out.println("시도할 회수는 몇회인가요?");
 			int n = sc.nextInt();
-			 try {
-		            n = Integer.parseInt(sc.nextLine());
-		        } catch (NumberFormatException e) {
-		            System.out.println("올바른 숫자 형식이 아닙니다.");
-		            return; 
-		        }
+			
 			//레이스 시작
 				System.out.println("실행 결과");
 				Race race = new Race(carList);
