@@ -38,4 +38,16 @@ public class SetTest {
 	assertTrue(numbers.contains(input));
 	}
 	
+	@ParameterizedTest
+	@ValueSource(ints = {1,2,3})
+	@DisplayName("요구사항 3 : 입력 값에 따라 결과 값이 다른 경우에 대한 테스트도 가능하도록 구현한다.")
+	void checkContain_bool(int input) {
+		if(input < 4) {
+			assertThat(numbers.contains(input)).isTrue();
+		}
+		else {
+			assertThat(numbers.contains(input)).isFalse();
+		}
+	}
+	
 }
