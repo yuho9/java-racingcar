@@ -14,6 +14,9 @@ public class Race {
 	//현재 기록을 출력
 	public void printResult() {
 		for(Car car : carList ) {
+			if(findMax()==car.getRecord()) {
+				System.out.print("*");
+			}
 			System.out.println(car.getName() + " : -" + car.showRecord());
 		}
 		System.out.println();
@@ -31,6 +34,7 @@ public class Race {
 		printResult();
         for (int i = 0; i < n; i++) {
             moveCarList();
+            
             printResult();
         }
     }
