@@ -27,5 +27,15 @@ public class StringTest {
 		
 		assertThat(strArr).containsExactly("1");
 	}
+	
+	@Test
+	@DisplayName("요구사항 2 : (1,2) 값이 주어졌을 때 String의 substring 메소드를 활용해 () 을 제거하고 1,2를 반환하도록 구현한다.")
+	void remove() {
+		String str = "(1,2)";
+		
+		String result = str.substring(1,str.length()-1);
+		
+		assertThat(result).isEqualTo("1,2");
+	}
 
 } 
