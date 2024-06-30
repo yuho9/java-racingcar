@@ -35,6 +35,24 @@ public class Race {
         }
     }
 	
+	//현재까지 자동차의 기록중 가장 큰값을 찾아냄
+		public int findMax(){
+			int max = 0;
+			for (Car car : carList) {
+				max = (car.getRecord()>max?car.getRecord():max);
+	        }
+			return max;
+		}
+		
+		//승자를 찾아냄
+		public List<String> winner(){
+			List<String> winnerList = new ArrayList<>();
+			for(Car car : carList) {
+				winnerList.add(car.getRecord() == findMax()?car.getName():"");
+			}
+			winnerList.removeIf(String::isEmpty);
+			return winnerList;
+	}
 	
 	
 }

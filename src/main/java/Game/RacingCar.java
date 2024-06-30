@@ -34,7 +34,21 @@ public class RacingCar {
 		        } catch (NumberFormatException e) {
 		            System.out.println("올바른 숫자 형식이 아닙니다.");
 		            return; 
-		        }	
+		        }
+			//레이스 시작
+				System.out.println("실행 결과");
+				Race race = new Race(carList);
+				race.start(n);
+
+				//승자 출력
+				List<String> winners = race.winner();
+				System.out.println(String.join(", ", winners) + "가 최종 우승했습니다.");
+				
+				
+				
+				
+				sc.close();
+
 
 	}
 
