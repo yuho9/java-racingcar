@@ -37,5 +37,18 @@ public class StringTest {
 		
 		assertThat(result).isEqualTo("1,2");
 	}
-
+	
+	@Test
+	@DisplayName("요구사항 3-1 : abc 값이 주어졌을 때 String의 ??? 메소드를 활용해 특정 위치의 문자를 가져오는 학습 테스트를 구현한다.")
+	void getChar() {
+		String str = "abc";
+		
+		char get = str.charAt(2);
+		
+		assertThat(get).isEqualTo('c');
+		
+	}
+	
+	
+	
 } 
