@@ -14,6 +14,18 @@ public class RacingCar {
 		String input = sc.nextLine();
 		String[] name = input.split(",");
 		
+		//자동차 리스트 생성
+		List<Car> carList = new ArrayList<>();
+			for (String n : name) {
+				try {
+					carList.add(new Car(n.trim()));
+					} 
+				catch (IllegalArgumentException e) {
+					System.out.println(e.getMessage());
+					return; // 프로그램 종료
+					}
+		        }
+	
 		
 
 	}
